@@ -21,7 +21,7 @@
   <header>
     <h1>SWARM · 스웜</h1>
     <p>개인정보처리방침 · Privacy Policy</p>
-    <p class="meta">시행일 / Effective: 2026-10-26 · KCREW(KR)<br>앱 ID: com.kcrew.masklings.swarm</p>
+    <p class="meta">시행일 / Effective: 2026-10-27 · KCREW(KR)<br>앱 ID: com.kcrew.masklings.swarm</p>
     <nav aria-label="페이지 안내"><a href="#ko">한국어</a><a href="#en">English</a><a href="https://swarm.maskling.com/support/">고객지원 / Support</a><a href="https://maskling.com/">개발자 웹사이트</a></nav>
   </header>
   <section id="ko" lang="ko" aria-labelledby="ko-title">
@@ -43,6 +43,7 @@
     <h2>5. 1.1.3의 지역 판정과 광고 선택</h2>
     <p>광고 SDK 시작 전에 KCREW의 자체 서버가 접속 IP로 국가를 판정합니다. 기기 언어, SIM 정보나 랭킹에서 선택한 국가는 사용하지 않습니다. EEA·영국·스위스, 국가 미상 또는 판정 실패·만료 시에는 광고 SDK를 시작하지 않습니다. 그 외 지역에서는 맞춤 광고 없음과 CCPA 판매 거부 설정을 전송합니다.</p>
     <p>이 버전은 맞춤형 광고 동의 팝업(CMP)을 도입하지 않습니다. 광고 허용 판정은 짧은 기간 동안 메모리에 보관하고 갱신하며, 오프라인이나 광고 오류가 있어도 기본 게임을 계속 이용할 수 있습니다. 광고 식별자와 개인정보 설정은 운영체제 설정에서도 관리할 수 있습니다.</p>
+    <p>iOS 1.1.3은 광고 허용 지역에서만 광고 SDK 초기화 전에 Apple의 추적 권한(ATT)을 요청할 수 있습니다. ATT는 위 지역 판정을 대체하지 않으며, 허용해도 맞춤 광고를 켜지 않습니다. 거부·제한된 경우에도 운영체제의 권한 제한을 존중하며 비맞춤 광고를 제공할 수 있고, 게임 기능이나 보상은 동의 여부에 따라 제한하지 않습니다.</p>
 
     <h2 id="delete-data">6. 보관 및 데이터 삭제 요청</h2>
     <p>로컬 게임 데이터는 사용자가 앱 또는 데이터를 삭제할 때까지 기기에 보관됩니다. 원격 랭킹 기록은 랭킹 제공에 필요한 동안 또는 삭제 요청이 처리될 때까지 보관합니다. 앱 삭제만으로 Firebase의 랭킹 기록이 자동 삭제되지는 않습니다.</p>
@@ -81,6 +82,7 @@
     <h2>5. Region gate and choices in 1.1.3</h2>
     <p>Before advertising SDK startup, KCREW's first-party server determines the country from the connection IP, not device language, SIM or ranking selection. SDKs do not start in the EEA, United Kingdom, Switzerland, unknown countries, or after failed/expired verification. Elsewhere the App sends no-personalization and CCPA opt-out settings.</p>
     <p>This version does not introduce a personalized-advertising consent popup (CMP). The short-lived decision is kept in memory and refreshed. Core combat remains available offline and when ads fail. You can also manage advertising identifiers and privacy preferences in your operating-system settings.</p>
+    <p>On iOS, version 1.1.3 may request Apple's App Tracking Transparency (ATT) permission before ad SDK initialization, only in ad-eligible regions. ATT does not replace the region gate, and authorization does not enable personalized advertising. When permission is denied or restricted, non-personalized ads may still be provided while respecting operating-system restrictions. Game functionality and rewards do not depend on granting ATT permission.</p>
 
     <h2 id="delete-data-en">6. Retention and deletion</h2>
     <p>Local data remains until you remove the App or its data. Remote ranking records are retained while needed to provide rankings or until a deletion request is fulfilled. Uninstalling alone does not automatically delete Firebase ranking records.</p>
